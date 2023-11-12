@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+@font-face {
+    font-family: 'Srbija Sans';
+    src: url(assets/fonts/SrbijaSans.woff);
+}
+
+/* Base Styles
+Adapted from Skeleton by David Gamache 
+https://github.com/dhg/Skeleton/blob/master/css/skeleton.css */
+html {
+    font-size: 62.5%; /* "[Set] to 62.5% so that all the REM measurements ...
+    are based on 10px sizing." */
+}
+
+body {
+    font-size: 1.5em;
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    color: #1f2937;
+}
+
+/* Wrapper */
+
+#wrapper > * > .inner {
+    position: relative;
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 10rem;
+    z-index: 2;
+}
+
+    /* iPads, tablets */
+    @media screen and (max-width: 768px) {
+
+        #wrapper > * > .inner {
+            padding: 0 5rem;
+        }
+
+    }
+
+#wrapper > * > .inner > * > * {
+    flex: 1;
+}
+
+/* Typography
+Adapted from Skeleton by David Gamache
+https://github.com/dhg/Skeleton/blob/master/css/skeleton.css */
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1F2937;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-family: 'Srbija Sans', Arial, Helvetica, sans-serif;
+}
+
+h1 { font-size: 4.0rem; line-height: 1.2; color: #f9faf8; }
+h2 { font-size: 3.3rem; line-height: 1.25; text-align: center; }
+h3 { font-size: 3.0rem; line-height: 1.3; }
+h4 { font-size: 2.4rem; line-height: 1.35; }
+h5 { font-size: 1.8rem; line-height: 1.5; }
+h6 { font-size: 1.5rem; line-height: 1.6; }
+
+h3.subheading {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Desktops, large screens */
+@media screen and (min-width: 1200px) {
+    h1 { font-size: 5.0rem; }
+    h2 { font-size: 4.2rem; }
+    h3 { font-size: 3.6rem; }
+    h4 { font-size: 3.0rem; }
+    h5 { font-size: 2.4rem; }
+    h6 { font-size: 1.5rem; }
+}
+
+p {
+    margin-top: 0;
+}
+
+/* Links */
+
+a {
+    text-decoration: none;
+}
+
+.button, button {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: #f9faf8;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 38px;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 2px solid #f9faf8;
+    transition: 0.3s;
+}
+
+.button:hover, button:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button.button-primary, button.button-primary {
+    background: #3882f6;
+    border: 0;
+}
+
+.button.button-primary:hover, button.button-primary:hover {
+    background: #619EFF;
+}
+
+/* Header Content */
+
+.background-cover {
+    position: relative;
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+    box-shadow: 0 3rem 3rem -2rem #000000 inset, 0 -3rem 3rem -2rem #000000 inset;
+    padding: 3rem 0;
+    z-index: 0;
+}
+
+.background-cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(31, 41, 55, 0.8);
+    z-index: 1;
+}
+
+/* Navigation Menu
+Adapted from Mobile Navigation Bar by W3Schools
+https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
+
+.top-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.top-nav a {
+    color: #f9faf8;
+}
+
+.top-nav a.logo {
+    color: #f9faf8;
+    font-size: 1.5em;
+    font-family: 'Srbija Sans', Arial, Helvetica, sans-serif;
+}
+
+.top-nav #menu-icon {
+    justify-content: flex-end;
+    border: 1px #f9faf8 solid;
+    padding: 0.6rem 0.8rem;
+}
+
+.top-nav #menu-icon::before {
+    content: "MENU";
+}
+
+    /* Desktops, large screens */
+    @media screen and (max-width: 1440px) {
+        .top-nav #menu-icon {
+            margin-right: 20rem;
+        }
+
+    }
+
+    /* iPads, tablets */
+    @media screen and (max-width: 768px) {
+
+        .top-nav #menu-icon {
+            margin-right: 10rem;
+        }
+
+    }
+
+.top-nav #nav-links {
+    display: none;
+    position: absolute;
+    right: 3.9em;
+    top: 5.5em;
+    background-color: #1f2947;
+}
+
+.top-nav #nav-links a {
+    padding: 1em;
+}
+
+.top-nav #nav-links a:hover {
+    background-color: #f9faf8;
+    color: #1f2947;
+}
+
+.top-nav .flag {
+    width: 2rem;
+    background-color: transparent;
+    padding: 0 1rem 0 0;
+}
+
+/* Homepage Content */
+
+.hero {
+    color: #f9faf8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .hero > * {
+    flex: 1;
+} */
+
+.description {
+    margin: 1em 0;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+.hero-image {
+    width: 30vw;
+    max-width: 800px;
+}
+
+.info {
+    padding: 2.5em;
+    box-shadow: 0 0 1em #000000;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-image {
+    width: 14vw;
+    height: 14vw;
+    object-fit: cover;
+    border-radius: 1.5em;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.info-image:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.info-subtext {
+    color: #1F2937;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.quote {
+    /* width: 100%; */
+    display: flex;
+    /* flex-wrap: wrap;
+    flex: 1; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.8rem;
+    font-style: italic;
+    text-align: center;
+    color: #f9faf8;
+    text-shadow: 0 0 1em black, 0 0 2em black;
+}
+
+.quote .author {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 3em;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.cta {
+    background: #3882f6;
+    width: 60em;
+    padding: 2em 0;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #f9faf8;
+    padding: 0 2em 0 4em;
+    line-height: 1.3em;
+}
+
+.cta-heading {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.cta-subtext {
+    margin-top: 3px;
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5em 0 3em;
+}
+
+.footer {
+    color: #f9faf8;
+    background: rgb(19, 25, 41);
+    padding: 1.25em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Small screens, laptops */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero-left {
+        margin: 4em auto 0 auto;
+        width: 65vw;
+    }
+    .hero-right {
+        margin-top: 4em;
+    }
+    .hero-image {
+        width: 60vw;
+    }
+}
+
+/* iPads, tablets */
+@media (max-width: 768px) {
+    .cta {
+        flex-direction: column;
+        width: 90%;
+    }
+    .cta-heading {
+        text-align: center;
+    }
+    .cta-button {
+        margin: 1em auto 0 auto;
+    }
+    .cta-content {
+        align-items: center;
+        padding: 0;
+        margin: 0 1em;
+    }
+    .cta-subtext {
+        text-align: center;
+    }
+    .info-content {
+        flex-direction: column;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .hero-image {
+        /* width: 70vw; */
+    }
+}
