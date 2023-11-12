@@ -40,10 +40,6 @@ body {
 
     }
 
-#wrapper > * > .inner > * > * {
-    flex: 1;
-}
-
 /* Typography
 Adapted from Skeleton by David Gamache
 https://github.com/dhg/Skeleton/blob/master/css/skeleton.css */
@@ -152,7 +148,12 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
+    flex: 1;
     z-index: 1;
+}
+
+.top-nav .right {
+    justify-content: flex-end;
 }
 
 .top-nav a {
@@ -165,19 +166,15 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     font-family: 'Srbija Sans', Arial, Helvetica, sans-serif;
 }
 
-.top-nav #menu-icon {
-    justify-content: flex-end;
+.top-nav #menu {
+    text-transform: uppercase;
     border: 1px #f9faf8 solid;
     padding: 0.6rem 0.8rem;
 }
 
-.top-nav #menu-icon::before {
-    content: "MENU";
-}
-
     /* Desktops, large screens */
     @media screen and (max-width: 1440px) {
-        .top-nav #menu-icon {
+        .top-nav #menu {
             margin-right: 20rem;
         }
 
@@ -185,23 +182,23 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 
     /* iPads, tablets */
     @media screen and (max-width: 768px) {
-
-        .top-nav #menu-icon {
+        .top-nav #menu {
             margin-right: 10rem;
         }
-
     }
 
 .top-nav #nav-links {
     display: none;
     position: absolute;
-    right: 3.9em;
-    top: 5.5em;
+    right: 30rem;
+    top: 4rem;
     background-color: #1f2947;
 }
 
 .top-nav #nav-links a {
-    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
 }
 
 .top-nav #nav-links a:hover {
@@ -211,6 +208,7 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 
 .top-nav .flag {
     width: 2rem;
+    height: 2rem;
     background-color: transparent;
     padding: 0 1rem 0 0;
 }
@@ -225,9 +223,9 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     align-items: center;
 }
 
-/* .hero > * {
+.hero > * {
     flex: 1;
-} */
+}
 
 .description {
     margin: 1em 0;
@@ -239,6 +237,23 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     width: 30vw;
     max-width: 800px;
 }
+
+    /* Small screens, laptops */
+    @media (max-width: 1024px) {
+        .hero {
+            flex-direction: column;
+        }
+        .hero-left {
+            margin: 4em auto 0 auto;
+            width: 65vw;
+        }
+        .hero-right {
+            margin-top: 4em;
+        }
+        .hero-image {
+            width: 60vw;
+        }
+    }
 
 .info {
     padding: 2.5em;
@@ -348,23 +363,6 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-/* Small screens, laptops */
-@media (max-width: 1024px) {
-    .hero {
-        flex-direction: column;
-    }
-    .hero-left {
-        margin: 4em auto 0 auto;
-        width: 65vw;
-    }
-    .hero-right {
-        margin-top: 4em;
-    }
-    .hero-image {
-        width: 60vw;
-    }
 }
 
 /* iPads, tablets */
