@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
 @font-face {
     font-family: 'Srbija Sans';
-    src: url(assets/fonts/SrbijaSans.woff);
+    src: url(fonts/SrbijaSans.woff);
 }
 
 /* Base Styles
@@ -265,7 +265,7 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 
 .quote .author {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
     margin-right: 0;
     margin-left: auto;
@@ -307,6 +307,31 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     margin: 0 5em 0 3em;
 }
 
+    /* iPads, tablets */
+    @media (max-width: 768px) {
+        .cta {
+            width: 100%;
+            flex-direction: column;
+        }
+        .cta-heading {
+            text-align: center;
+        }
+        .cta-button {
+            margin: 1em auto 0 auto;
+        }
+        .cta-content {
+            align-items: center;
+            padding: 0;
+            margin: 0 1em;
+        }
+        .cta-subtext {
+            text-align: center;
+        }
+        .info-content {
+            flex-direction: column;
+        }
+}
+
 .footer {
     color: #f9faf8;
     background: rgb(19, 25, 41);
@@ -315,38 +340,6 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-/* iPads, tablets */
-@media (max-width: 768px) {
-    .cta {
-        width: 100%;
-        flex-direction: column;
-    }
-    .cta-heading {
-        text-align: center;
-    }
-    .cta-button {
-        margin: 1em auto 0 auto;
-    }
-    .cta-content {
-        align-items: center;
-        padding: 0;
-        margin: 0 1em;
-    }
-    .cta-subtext {
-        text-align: center;
-    }
-    .info-content {
-        flex-direction: column;
-    }
-}
-
-/* Mobile devices */
-@media (max-width: 480px) {
-    .hero-image {
-        /* width: 70vw; */
-    }
 }
 
 /* Wrapper */
