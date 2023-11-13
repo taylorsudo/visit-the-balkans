@@ -273,7 +273,7 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 
 .featured h3 {
     text-align: center;
-    font-size: 1vw;
+    font-size: 1.2vw;
     margin-bottom: 0;
 }
 
@@ -282,7 +282,7 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 @media screen and (max-width: 1024px) {
 
     .featured h3 {
-        font-size: 1.6rem;
+        font-size: 2.4rem;
     }
 }
 
@@ -323,10 +323,8 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 }
 
 .info p {
-    width: 80%;
     color: #1F2937;
     text-align: center;
-    font-size: 0.8em;
 }
 
 /* Small screens, laptops */
