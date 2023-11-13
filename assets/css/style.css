@@ -8,6 +8,7 @@
 /* Base Styles
 Adapted from Skeleton by David Gamache 
 https://github.com/dhg/Skeleton/blob/master/css/skeleton.css */
+
 html {
     font-size: 62.5%;
     /* "[Set] to 62.5% so that all the REM measurements ...
@@ -34,7 +35,7 @@ h5,
 h6 {
     color: #1F2937;
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-family: 'Srbija Sans', Arial, Helvetica, sans-serif;
 }
 
@@ -47,7 +48,6 @@ h1 {
 h2 {
     font-size: 3.3rem;
     line-height: 1.25;
-    text-align: center;
 }
 
 h3 {
@@ -70,13 +70,8 @@ h6 {
     line-height: 1.6;
 }
 
-h3.subheading {
-    font-size: 1.6rem;
-    text-align: center;
-    margin-bottom: 0;
-}
-
 /* Desktops, large screens */
+
 @media screen and (min-width: 1200px) {
     h1 {
         font-size: 5.0rem;
@@ -154,7 +149,6 @@ button.button-primary:hover {
     background-size: cover;
     object-fit: cover;
     background-attachment: fixed;
-    box-shadow: 0 3rem 3rem -2rem #000000 inset, 0 -3rem 3rem -2rem #000000 inset;
     padding: 3rem 0;
     z-index: 0;
 }
@@ -179,8 +173,8 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     text-decoration: none;
+    padding-bottom: 3rem;
     flex: 1;
     z-index: 1;
 }
@@ -234,7 +228,6 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
     color: #f9faf8;
 }
 
@@ -249,9 +242,11 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 }
 
 /* Small screens, laptops */
+
 @media (max-width: 1024px) {
     .hero {
         flex-direction: column;
+        padding-bottom: 3rem;
     }
 
     .hero img {
@@ -264,8 +259,26 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 }
 
 .info {
-    padding: 2.5em;
-    box-shadow: 0 0 1em #000000;
+    position: relative;
+    box-shadow: 0 0 2rem #000000;
+    padding: 3rem 0;
+    z-index: 2;
+}
+
+/* .info>* {
+    width: 100%;
+    flex: 1;
+} */
+
+.info h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.info h3 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 0;
 }
 
 .info-content {
@@ -273,8 +286,6 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 4rem;
 }
 
 .info-container {
@@ -335,6 +346,7 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     align-items: center;
     justify-content: space-evenly;
     margin: 2rem auto;
+    padding: 2rem 0;
 }
 
 .cta-content {
@@ -363,6 +375,7 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 }
 
 /* iPads, tablets */
+
 @media (max-width: 768px) {
     .cta {
         width: 100%;
@@ -413,7 +426,7 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 }
 
 #wrapper>*>.inner>* {
-    padding: 3rem 0;
+    gap: 3rem;
 }
 
 .right {
