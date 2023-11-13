@@ -122,8 +122,15 @@ a {
     text-decoration: none;
 }
 
-.button,
 button {
+    color: #f9faf8;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px #f9faf8 solid;
+    padding: 0.8rem 1rem;
+}
+
+.button {
     display: inline-block;
     height: 38px;
     padding: 0 30px;
@@ -145,14 +152,12 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.button.button-primary,
-button.button-primary {
+.button.button-primary {
     background: #3882f6;
     border: 0;
 }
 
-.button.button-primary:hover,
-button.button-primary:hover {
+.button.button-primary:hover {
     background: #619EFF;
 }
 
@@ -182,7 +187,7 @@ button.button-primary:hover {
 Adapted from Mobile Navigation Bar by W3Schools
 https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 
-.top-nav {
+#banner {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -193,43 +198,42 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     z-index: 1;
 }
 
-.top-nav a {
+#banner * {
+    display: flex;
+    align-items: flex-start;
+}
+
+#banner a {
     color: #f9faf8;
 }
 
-.top-nav a.logo {
+#banner a#logo {
     color: #f9faf8;
     font-size: 1.5em;
     font-family: 'Srbija Sans', Arial, Helvetica, sans-serif;
 }
 
-#menu {
-    text-transform: uppercase;
-    border: 1px #f9faf8 solid;
-    padding: 0.6rem 0.8rem;
-}
-
-#nav-links {
+#navigation {
     display: none;
-    position: absolute;
-    right: 30rem;
-    top: 4rem;
+    position: fixed;
+    right: 14rem;
+    top: 7rem;
     background-color: #1f2947;
 }
 
-menu a {
+#navigation a {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 1rem;
 }
 
-#nav-links a:hover {
+#navigation a:hover {
     background-color: #f9faf8;
     color: #1f2947;
 }
 
-#nav-links img {
+#navigation img {
     width: 2rem;
     height: 2rem;
     background-color: transparent;
@@ -251,8 +255,14 @@ menu a {
     flex: 1;
 }
 
-.hero img {
+.hero figure {
     width: 20vw;
+    display: flex;
+    justify-content: center;
+}
+
+.hero > * > img {
+    width: 100%;
     max-width: 600px;
 }
 
@@ -264,11 +274,18 @@ menu a {
         padding-bottom: 3rem;
     }
 
-    .hero img {
-        width: 60vw;
+    .hero>* {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .hero *:first-child {
+    .hero figure {
+        width: 100%;
+    }
+
+    .hero > :first-child {
         order: 2;
     }
 }
@@ -467,8 +484,4 @@ footer {
 
 #wrapper>*>.inner>* {
     gap: 3rem;
-}
-
-.right {
-    justify-content: flex-end;
 }
