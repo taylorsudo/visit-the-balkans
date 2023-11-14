@@ -30,6 +30,10 @@ body {
     color: #1f2937;
 }
 
+/* Setting article elements to full width */
+article {
+    width: 100%;
+}
 
 /* Typography * * * * * * * * * * * * * * * * * * * * * * * * *
 Adapted from Skeleton by David Gamache
@@ -115,7 +119,7 @@ blockquote {
     font-size: 3.2rem;
     font-style: italic;
     text-align: center;
-    text-shadow: 0 0 1em black, 0 0 2em black;
+    text-shadow: 0 0 1rem #000000;
 }
 
 /* Applying styles to both menu and ul tags by removing list styles 
@@ -279,6 +283,7 @@ both vertically and horizontally, and set text colour */
     justify-content: center;
     align-items: center;
     color: #f9faf8;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
 }
 
 /* Setting width and flex factor for direct children of #hero */
@@ -287,9 +292,14 @@ both vertically and horizontally, and set text colour */
     flex: 1;
 }
 
-/* Narrowing width for h1 tags in the hero section to wrap text */
-#hero h1 {
+/* Narrowing width for h1 tags in the homepage's hero section to wrap text */
+#hero.home h1 {
     width: 80%;
+}
+
+/* Adding text shadow to paragraphs in the homepage's hero section for better contrast */
+#hero p {
+    text-shadow: 0 0 1rem #000000;
 }
 
 /* Styling figure tags in the hero for defined width and content alignment */
@@ -308,16 +318,20 @@ both vertically and horizontally, and set text colour */
     /* Media query for screens with max width of 992px, adjusting #hero 
     and its children to a column layout with centre alignment and text centring */
     @media screen and (max-width: 992px) {
-        /* Switch hero layout to column and add bottom padding */
+        /* Switch hero layout to column */
         #hero {
             flex-direction: column;
-            padding-bottom: 3rem;
         }
 
-        /* Adjust layout and alignment of direct children of #hero for smaller screens */
+        /* Adjust layout of direct children of #hero for smaller screens */
         #hero>* {
             display: flex;
             flex-direction: column;
+        }
+
+        /* Centre text alignment of direct children of the homepage's #hero 
+        for smaller screens */
+        #hero.home>* {
             align-items: center;
             text-align: center;
         }
@@ -327,18 +341,19 @@ both vertically and horizontally, and set text colour */
             width: 100%;
         }
 
-        /* Change order of first child of #hero to be last in smaller screens */
-        #hero> :first-child {
+        /* Change order of first child of the homepage's hero section 
+        to be last in smaller screens */
+        #hero.home> :first-child {
             order: 2;
         }
     }
 
 
-/* Featured Section * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Main Section * * * * * * * * * * * * * * * * * * * * * * * * */
 
-/* Styling the featured section with a relative position, shadow, padding, 
+/* Styling main sections with a relative position, shadow, padding, 
 flex factor and an increased z-index to display box shadow */
-#featured {
+main {
     position: relative;
     box-shadow: 0 0 2rem #000000;
     padding: 3rem 0;
@@ -346,36 +361,78 @@ flex factor and an increased z-index to display box shadow */
     z-index: 1;
 }
 
-/* Aligning the h2 elements within the featured section to the centre 
-and adding a bottom margin */
-#featured h2 {
-    text-align: center;
-    align-items: center;
-    margin-bottom: 3rem;
-}
-
-/* Setting the direct children elements of the featured section to 
-a flex row layout, aligned to the start and justified at the centre */
-#featured>*>* {
+/* Displaying flex containers as rows, with items aligned at the top 
+and centred horizontally. */
+.row {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
 }
 
-/* Aligning and centring the grand-children elements of the featured section, 
-and setting a width and flex factor */
-#featured>*>*>* {
-    width: 100%;
+/* Displaying flex containers as columns, with items centred vertically. */
+.column {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    flex: 1;
 }
 
-/* Setting a width for article elements within the featured section */
-#featured article {
+/* Styling image elements within main sections with a square width and height
+based on viewport width, decreased opacity for a fade effect, and other properties */
+main img {
+    width: 30vw;
+    height: 20vw;
+    object-fit: cover;
+    border-radius: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Centring h2 elements within the main section and adding a bottom margin for spacing */
+main h2 {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+/* Styling alternative article elements with a light grey background 
+and top padding for spacing */
+article.alt {
+    background-color: #ebebeb;
+    padding-top: 3rem;
+}
+
+/* Adding top padding to the last child element with the .column class */
+.column:last-child {
+    padding-top: 3rem;
+}
+
+/* Centring section elements that are direct children of elements with the 'inner' class, 
+and adding bottom padding for spacing */
+.inner>section {
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+    /* Media query for screens with max width of 992px, adjusting the layout and styles 
+    for the featured section and its children */
+    @media screen and (max-width: 992px) {
+        /* Change the flex direction of the row class to column */
+        .row {
+            flex-direction: column;
+        }
+
+        /* Adjust the width and height of image elements within the main section */
+        main img {
+            width: 100%;
+            height: 50vw;
+        }
+    }
+
+
+/* Featured Section * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Setting the width of the hyperlinked elements within the featured section to 100% */
+#featured a {
     width: 100%;
 }
 
@@ -394,8 +451,6 @@ based on viewport width, decreased opacity for a fade effect, and other properti
 #featured img {
     width: 14vw;
     height: 14vw;
-    flex-direction: column;
-    object-fit: cover;
     border-radius: 1.2rem;
     opacity: 0.8;
     transition: 0.3s;
@@ -418,11 +473,6 @@ to create a zoom effect, and restoring opacity to 1 */
     /* Media query for screens with max width of 992px, adjusting the layout and styles 
     for the featured section and its children */
     @media screen and (max-width: 992px) {
-        /* Adjust the layout of child elements of the featured section to column */
-        #featured>*>* {
-            flex-direction: column;
-        }
-
         /* Increase font size of h3 elements within the featured section */
         #featured h3 {
             font-size: 2.4rem;
@@ -502,7 +552,7 @@ box shadow, blue background, padding, and margin */
 }
 
     /* Media query to rearrange CTA layout and styles on screens narrower than 768px */
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 992px) {
         .cta {
             flex-direction: column;
             padding: 3rem;
@@ -614,7 +664,7 @@ font size, and margin */
 /* Defining layout and styles for any .inner class element that is a direct child 
 of any element within the wrapper, including setting relative position, width, 
 max-width, and automatic margins (centring) */
-#wrapper>*>.inner {
+.inner {
     position: relative;
     width: 80%;
     max-width: 128rem;
@@ -623,6 +673,6 @@ max-width, and automatic margins (centring) */
 
 /* Setting the gap between all direct child elements of an .inner class 
 within the wrapper to maintain consistent space between elements */
-#wrapper>*>.inner>* {
+.inner>* {
     gap: 3rem;
 }
