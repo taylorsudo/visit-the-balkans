@@ -242,7 +242,7 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 
 /* Hero Section */
 
-.hero {
+#hero {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -250,18 +250,18 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     color: #f9faf8;
 }
 
-.hero>* {
+#hero>* {
     width: 100%;
     flex: 1;
 }
 
-.hero figure {
+#hero figure {
     width: 20vw;
     display: flex;
     justify-content: center;
 }
 
-.hero > * > img {
+#hero > * > img {
     width: 100%;
     max-width: 600px;
 }
@@ -269,30 +269,30 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 /* Small screens, laptops */
 
 @media screen and (max-width: 1024px) {
-    .hero {
+    #hero {
         flex-direction: column;
         padding-bottom: 3rem;
     }
 
-    .hero>* {
+    #hero>* {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .hero figure {
+    #hero figure {
         width: 100%;
     }
 
-    .hero > :first-child {
+    #hero > :first-child {
         order: 2;
     }
 }
 
 /* Featured Section */
 
-.featured {
+#featured {
     position: relative;
     box-shadow: 0 0 2rem #000000;
     padding: 3rem 0;
@@ -300,36 +300,19 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     z-index: 2;
 }
 
-.featured h2 {
+#featured h2 {
     text-align: center;
     margin-bottom: 3rem;
 }
 
-.featured figcaption {
-    font-family: 'Srbija Sans', Arial, Helvetica, sans-serif;
-    color: #1f2937;
-    text-align: center;
-    font-size: 1.2vw;
-    margin-bottom: 0;
-}
-
-/* Small screens, laptops */
-
-@media screen and (max-width: 1024px) {
-
-    .featured figcaption {
-        font-size: 2.4rem;
-    }
-}
-
-.info {
+#info {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
 }
 
-.info>* {
+#info>* {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -338,53 +321,54 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     flex: 1;
 }
 
-.info .thumbnail {
+#info article {
+    width: 100%;
+}
+
+#info h3 {
+    font-family: 'Srbija Sans', Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    text-align: center;
+    font-size: 1.2vw;
+    margin-bottom: 0;
+}
+
+#info img {
     width: 14vw;
     height: 14vw;
     flex-direction: column;
-    margin-bottom: 1.5rem;
-}
-
-.info figure {
-    width: 100%;
-}
-
-.info img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 1.2rem;
     opacity: 0.8;
     transition: 0.3s;
+    margin-bottom: 0.5rem;
 }
 
-.info img:hover {
+#info img:hover {
     transform: scale(1.05);
     opacity: 1;
 }
 
-.info p {
+#info p {
     color: #1f2937;
     text-align: center;
 }
 
 /* Small screens, laptops */
-
 @media screen and (max-width: 1024px) {
-    .info {
+    #info {
         flex-direction: column;
     }
-    .info .thumbnail {
+    #info h3 {
+        font-size: 2.4rem;
+    }
+    #info img {
         width: 100%;
-        height: 42vw;
+        height: 50vw;
     }
 }
 
 /* Quote Section */
-
-/* figure
-blockquote
-figcaption */
 
 .quote {
     display: flex;
@@ -395,22 +379,20 @@ figcaption */
     margin: 3rem;
 }
 
-.quote .author {
+.quote figcaption {
     font-size: 1.8rem;
     font-weight: 600;
     font-style: normal;
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: auto;
+    margin: 0 0 3rem auto;
 }
 
 /* Small screens, laptops */
 
 @media screen and (max-width: 1024px) {
-    .quote {
+    .quote blockquote {
         font-size: 2.4rem;
     }
-    .quote .author {
+    .quote figcaption {
         font-size: 1.6rem;
     }
 }
@@ -426,7 +408,7 @@ figcaption */
     background: #3882f6;
     border-radius: 0.5em;
     padding: 3rem 8rem;
-    margin: 2rem auto;
+    margin: 6rem auto;
 }
 
 .cta h2 {
@@ -445,6 +427,7 @@ figcaption */
 @media screen and (max-width: 768px) {
     .cta {
         flex-direction: column;
+        padding: 3rem;
     }
 
     .cta h2 {
@@ -468,7 +451,7 @@ footer {
     color: #f9faf8;
     background: #1f2937;
     box-shadow: 0 0 2rem #000000;
-    padding: 1.5rem;
+    padding: 3rem;
     z-index: 2;
 }
 

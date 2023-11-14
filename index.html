@@ -18,7 +18,8 @@
             <div class="inner">
                 <header id="banner">
                     <a href="/" id="logo">Visit the Balkans</a>
-                    <div>
+                    <nav>
+                        <button id="menu" onclick="showMenu()">Menu</button>
                         <menu id="navigation">
                             <li><a href="croatia/"><img src="assets/images/ico-croatia.png">Croatia</a></li>
                             <li><a href="bosnia/"><img src="assets/images/ico-bosnia.png">Bosnia &amp;
@@ -27,10 +28,9 @@
                             <li><a href="montenegro/"><img src="assets/images/ico-montenegro.png">Montenegro</a></li>
                             <li><a href="macedonia/"><img src="assets/images/ico-macedonia.png">North Macedonia</a></li>
                         </menu>
-                        <button id="menu" onclick="showMenu()">Menu</button>
-                    </div>
+                    </nav>
                 </header>
-                <div class="hero">
+                <div id="hero">
                     <div>
                         <h1>Adventure Awaits You</h1>
                         <p>
@@ -46,48 +46,48 @@
             </div>
         </div>
 
-        <div class="featured">
+        <main id="featured">
             <div class="inner">
             <h2>Discover the Balkans</h2>
-                <div class="info">
+                <div id="info">
                     <a href="croatia/">
-                        <figure>
-                            <img src="assets/images/hero-croatia.jpg" class="info thumbnail">
-                            <figcaption>Croatia</figcaption>
-                        </figure>
-                        <p>Coastal gem with a Mediterranean charm.</p>
+                        <article>
+                            <img src="assets/images/hero-croatia.jpg">
+                            <h3>Croatia</h3>
+                            <p>Coastal gem with a Mediterranean charm.</p>
+                        </article>
                     </a>
                     <a href="bosnia/">
-                        <figure>
-                            <img src="assets/images/hero-bosnia.jpg" class="info thumbnail">
-                            <figcaption>Bosnia &amp; Herzegovina</figcaption>
-                        </figure>
-                        <p>Timeless tales etched in nature.</p>
+                        <article>
+                            <img src="assets/images/hero-bosnia.jpg">
+                            <h3>Bosnia &amp; Herzegovina</h3>
+                            <p>Timeless tales etched in nature.</p>
+                        </article>
                     </a>
                     <a href="serbia/">
-                        <figure>
-                            <img src="assets/images/hero-serbia.jpg" class="info thumbnail">
-                            <figcaption>Serbia</figcaption>
-                        </figure>
-                        <p>A mix of cultures and vibrant urban life.</p>
+                        <article>
+                            <img src="assets/images/hero-serbia.jpg">
+                            <h3>Serbia</h3>
+                            <p>A mix of cultures and vibrant urban life.</p>
+                        </article>
                     </a>
                     <a href="montenegro/">
-                        <figure>
-                            <img src="assets/images/hero-montenegro.jpg" class="info thumbnail">
-                            <figcaption>Montenegro</figcaption>
-                        </figure>
-                        <p>Nature's masterpiece on the Adriatic.</p>
+                        <article>
+                            <img src="assets/images/hero-montenegro.jpg">
+                            <h3>Montenegro</h3>
+                            <p>Nature's masterpiece on the Adriatic.</p>
+                        </article>
                     </a>
                     <a href="macedonia/">
-                        <figure>
-                            <img src="assets/images/hero-macedonia.jpg" class="info thumbnail">
-                            <figcaption>North Macedonia</figcaption>
-                        </figure>
-                        <p>A blend of cultures in scenic beauty.</p>
+                        <article>
+                            <img src="assets/images/hero-macedonia.jpg">
+                            <h3>North Macedonia</h3>
+                            <p>A blend of cultures in scenic beauty.</p>
+                        </article>
                     </a>
                 </div>
             </div>
-        </div>
+        </main>
 
         <div class="background-cover" style="background-image: url('assets/images/quotes-balkans.jpg');">
             <div class="inner">
@@ -100,7 +100,7 @@
                         What truly sets the Balkans apart is the warmth of its people. I left with cherished memories and
                         newfound friends."
                     </blockquote>
-                    <figcaption class="quote author">-Gabriel, Sydney</figcaption>
+                    <figcaption>-Gabriel, Sydney</figcaption>
                 </figure>
                 <div class="cta">
                     <div>
