@@ -1,10 +1,11 @@
-// Hamburger menu
-// Adapted from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
-function showMenu() {
-  var x = document.getElementById("navigation");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+/* Side Navigation
+Adapted from How TO - Side Navigation by W3Schools
+https://www.w3schools.com/howto/howto_js_sidenav.asp */
+function openNav() {
+  document.getElementById("nav").style.width = "25rem";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("nav").style.width = "0";
 }

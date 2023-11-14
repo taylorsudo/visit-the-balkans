@@ -14,20 +14,21 @@
 <body>
 
     <div id="wrapper">
+        <menu id="nav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <li><a href="croatia/"><img src="assets/images/ico-croatia.png">Croatia</a></li>
+            <li><a href="bosnia/"><img src="assets/images/ico-bosnia.png">Bosnia &amp;
+                    Herzegovina</a></li>
+            <li><a href="serbia/"><img src="assets/images/ico-serbia.png">Serbia</a></li>
+            <li><a href="montenegro/"><img src="assets/images/ico-montenegro.png">Montenegro</a></li>
+            <li><a href="macedonia/"><img src="assets/images/ico-macedonia.png">North Macedonia</a></li>
+        </menu>
         <div class="background-cover" style="background-image: url('assets/images/hero-balkans.jpg');">
             <div class="inner">
                 <header id="banner">
                     <a href="/" id="logo">Visit the Balkans</a>
                     <nav>
-                        <button id="menu" onclick="showMenu()">Menu</button>
-                        <menu id="navigation">
-                            <li><a href="croatia/"><img src="assets/images/ico-croatia.png">Croatia</a></li>
-                            <li><a href="bosnia/"><img src="assets/images/ico-bosnia.png">Bosnia &amp;
-                                Herzegovina</a></li>
-                            <li><a href="serbia/"><img src="assets/images/ico-serbia.png">Serbia</a></li>
-                            <li><a href="montenegro/"><img src="assets/images/ico-montenegro.png">Montenegro</a></li>
-                            <li><a href="macedonia/"><img src="assets/images/ico-macedonia.png">North Macedonia</a></li>
-                        </menu>
+                        <button id="menu" onclick="openNav()">Menu</button>
                     </nav>
                 </header>
                 <div id="hero">
@@ -48,7 +49,7 @@
 
         <main id="featured">
             <div class="inner">
-            <h2>Discover the Balkans</h2>
+                <h2>Discover the Balkans</h2>
                 <div id="info">
                     <a href="croatia/">
                         <article>
@@ -93,11 +94,14 @@
             <div class="inner">
                 <figure class="quote">
                     <blockquote>
-                        "My journey through the Balkans was a revelation. From the breathtaking Plitvice Lakes in Croatia to
+                        "My journey through the Balkans was a revelation. From the breathtaking Plitvice Lakes in
+                        Croatia to
                         the
-                        rich history of Novi Sad in Serbia, the region's diverse landscapes and vibrant culture captivated
+                        rich history of Novi Sad in Serbia, the region's diverse landscapes and vibrant culture
+                        captivated
                         me.
-                        What truly sets the Balkans apart is the warmth of its people. I left with cherished memories and
+                        What truly sets the Balkans apart is the warmth of its people. I left with cherished memories
+                        and
                         newfound friends."
                     </blockquote>
                     <figcaption>-Gabriel, Sydney</figcaption>

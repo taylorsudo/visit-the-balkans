@@ -111,9 +111,9 @@ blockquote {
 
 menu,
 ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
 }
 
 /* Links */
@@ -213,33 +213,6 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     font-family: 'Srbija Sans', Arial, Helvetica, sans-serif;
 }
 
-#navigation {
-    display: none;
-    position: fixed;
-    right: 14rem;
-    top: 7rem;
-    background-color: #1f2947;
-}
-
-#navigation a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1rem;
-}
-
-#navigation a:hover {
-    background-color: #f9faf8;
-    color: #1f2947;
-}
-
-#navigation img {
-    width: 2rem;
-    height: 2rem;
-    background-color: transparent;
-    padding: 0 1rem 0 0;
-}
-
 /* Hero Section */
 
 #hero {
@@ -261,7 +234,7 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     justify-content: center;
 }
 
-#hero > * > img {
+#hero>*>img {
     width: 100%;
     max-width: 600px;
 }
@@ -285,7 +258,7 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
         width: 100%;
     }
 
-    #hero > :first-child {
+    #hero> :first-child {
         order: 2;
     }
 }
@@ -359,9 +332,11 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     #info {
         flex-direction: column;
     }
+
     #info h3 {
         font-size: 2.4rem;
     }
+
     #info img {
         width: 100%;
         height: 50vw;
@@ -392,6 +367,7 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     .quote blockquote {
         font-size: 2.4rem;
     }
+
     .quote figcaption {
         font-size: 1.6rem;
     }
@@ -453,6 +429,77 @@ footer {
     box-shadow: 0 0 2rem #000000;
     padding: 3rem;
     z-index: 2;
+}
+
+/* Side Navigation
+Adapted from How TO - Side Navigation by W3Schools
+https://www.w3schools.com/howto/howto_js_sidenav.asp */
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 3;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    right: 0;
+    background-color: #1f2937;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 6rem;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.8rem 0.8rem 0.8rem 3.2rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #f9faf8;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav li a:hover {
+    background-color: #f9faf8;
+    color: #1f2947;
+}
+
+.sidenav img {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    padding: 0 1rem 0 0;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 2.5rem;
+    font-size: 3.6rem;
+    margin-left: 5rem;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 1.5rem;
+    }
+
+    .sidenav a {
+        font-size: 1.8rem;
+    }
 }
 
 /* Wrapper */
