@@ -1,20 +1,27 @@
+/* Importing the 'Inter' font from Google Fonts, with two specific weights: 300 and 600 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
 
+/* Defining a new font-face, 'Srbija Sans' by Metaklinika 
+https://www.srbijasans.rs/ */
 @font-face {
     font-family: 'Srbija Sans';
     src: url(../fonts/SrbijaSans.woff);
 }
 
-/* Base Styles
-Adapted from Skeleton by David Gamache 
+
+/* Base Styles * * * * * * * * * * * * * * * * * * * * * * * * *
+Adapted from Skeleton by David Gamache
 https://github.com/dhg/Skeleton/blob/master/css/skeleton.css */
 
+/* Setting the base font size for the entire HTML document to 62.5%, 
+which sets 1rem to be approximately 10px 
+(since the default font-size for most browsers is 16px) */
 html {
     font-size: 62.5%;
-    /* "[Set] to 62.5% so that all the REM measurements ...
-    are based on 10px sizing." */
 }
 
+/* Setting the base font size for the body to be 1.5em, 
+which is 15px here due to setting of html font-size to 62.5% */
 body {
     font-size: 1.5em;
     line-height: 1.6;
@@ -23,22 +30,21 @@ body {
     color: #1f2937;
 }
 
-/* Typography
+
+/* Typography * * * * * * * * * * * * * * * * * * * * * * * * *
 Adapted from Skeleton by David Gamache
 https://github.com/dhg/Skeleton/blob/master/css/skeleton.css */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Defining the common styles for all headings to give them the same colour, 
+margins, and font family */
+h1, h2, h3, h4, h5, h6 {
     color: #1f2937;
     margin-top: 0;
     margin-bottom: 1rem;
     font-family: 'Srbija Sans', Arial, Helvetica, sans-serif;
 }
 
+/* Setting individual font sizes and line heights for each heading level */
 h1 {
     font-size: 4.0rem;
     line-height: 1.2;
@@ -46,7 +52,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3.3rem;
+    font-size: 3.6rem;
     line-height: 1.25;
 }
 
@@ -70,38 +76,41 @@ h6 {
     line-height: 1.6;
 }
 
-/* Desktops, large screens */
+    /* Media query to adapt font-size of header tags for screens 
+    with a minimum width of 1200px for better readability */
+    @media screen and (min-width: 1200px) {
+        h1 {
+            font-size: 5.0rem;
+        }
 
-@media screen and (min-width: 1200px) {
-    h1 {
-        font-size: 5.0rem;
+        h2 {
+            font-size: 4.8rem;
+        }
+
+        h3 {
+            font-size: 3.6rem;
+        }
+
+        h4 {
+            font-size: 2.8rem;
+        }
+
+        h5 {
+            font-size: 2.4rem;
+        }
+
+        h6 {
+            font-size: 1.8rem;
+        }
     }
 
-    h2 {
-        font-size: 4.2rem;
-    }
-
-    h3 {
-        font-size: 3.6rem;
-    }
-
-    h4 {
-        font-size: 3.0rem;
-    }
-
-    h5 {
-        font-size: 2.4rem;
-    }
-
-    h6 {
-        font-size: 1.5rem;
-    }
-}
-
+/* Setting margins for all paragraph tags */
 p {
     margin: 0 0 2rem 0;
 }
 
+/* Styling all blockquote tags with larger font size, italicised, 
+and centred text, as well as a text-shadow for better contrast */
 blockquote {
     font-size: 3.2rem;
     font-style: italic;
@@ -109,19 +118,31 @@ blockquote {
     text-shadow: 0 0 1em black, 0 0 2em black;
 }
 
+/* Applying styles to both menu and ul tags by removing list styles 
+and any default padding for cleaner list presentation */
 menu,
 ul {
-    display: flex;
     list-style: none;
     padding: 0;
 }
 
-/* Links */
 
+/* Links * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Setting colour and removing default hyperlink underline 
+for unobtrusive link styles */
 a {
+    color: #3882f6;
     text-decoration: none;
 }
 
+/* Changing colour of hyperlinks on hover */
+a:hover {
+    color: #619eff;
+}
+
+/* Styling for menu button, including colour, uppercase text, 
+border, and background transparency */
 button {
     color: #f9faf8;
     text-transform: uppercase;
@@ -130,6 +151,7 @@ button {
     padding: 0.8rem 1rem;
 }
 
+/* Specific .button class styles for styling anchor elements */
 .button {
     display: inline-block;
     height: 38px;
@@ -145,33 +167,39 @@ button {
     transition: 0.3s;
 }
 
-.button:hover,
-button:hover {
+/* Hover effect styling for both .button class elements includes changing colour, 
+border colour, and adding background colour */
+.button:hover {
     color: #ffffff;
     border-color: #ffffff;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Specific hover effect styling for primary buttons with blue background and no border */
 .button.button-primary {
     background: #3882f6;
     border: 0;
 }
 
+/* Changing background colour of primary buttons on hover */
 .button.button-primary:hover {
-    background: #619EFF;
+    background: #619eff;
 }
 
-/* Header Content */
 
+/* Background Cover * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Class styles that set up a full size background cover with padding */
 .background-cover {
     position: relative;
     background-size: cover;
     object-fit: cover;
     background-attachment: fixed;
     padding: 3rem 0;
-    z-index: 0;
 }
 
+/* Pseudo-element for the background cover provides a dark overlay, 
+for creating contrast with light content in the foreground */
 .background-cover::before {
     content: "";
     position: absolute;
@@ -180,13 +208,15 @@ button:hover {
     bottom: 0;
     left: 0;
     background-color: rgba(31, 41, 55, 0.8);
-    z-index: 1;
 }
 
-/* Navigation Menu
+
+/* Navigation Menu * * * * * * * * * * * * * * * * * * * * * * * * *
 Adapted from Mobile Navigation Bar by W3Schools
 https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 
+/* Banner styles that set up a flex container with full width, row direction, 
+space-between content, and padding at the bottom */
 #banner {
     width: 100%;
     display: flex;
@@ -195,26 +225,54 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     text-decoration: none;
     padding-bottom: 3rem;
     flex: 1;
-    z-index: 1;
 }
 
+/* Styling child elements (direct and indirect) of the banner, 
+creating a flex container and aligning items to the start */
 #banner * {
     display: flex;
     align-items: flex-start;
 }
 
+/* Styling hyperlink colour within the banner */
 #banner a {
     color: #f9faf8;
 }
 
+/* Hover effect styling for banner links includes a glow effect, 
+and a transition for a smoother appearance change */
+#banner a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 0.8rem #ffffff;
+    transition: 0.3s;
+}
+
+/* Styling for #logo within the banner, adjusting colour, font size, 
+and font family */
 #banner a#logo {
     color: #f9faf8;
     font-size: 1.5em;
     font-family: 'Srbija Sans', Arial, Helvetica, sans-serif;
 }
 
-/* Hero Section */
+/* Adjusting the position of the menu button in the stack order */ 
+#menu {
+    z-index: 1;
+}
 
+/* Applying a box shadow to the menu button when it is being hovered over 
+for better user feedback, and adding a transition for a smoother appearance change */
+#menu:hover {
+    color: #ffffff;
+    box-shadow: 0 0 0.8rem #ffffff;
+    transition: 0.3s;
+}
+
+
+/* Hero Section * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Hero styles define a flex container with centered content, 
+both vertically and horizontally, and set text colour */
 #hero {
     display: flex;
     flex-direction: row;
@@ -223,69 +281,91 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     color: #f9faf8;
 }
 
+/* Setting width and flex factor for direct children of #hero */
 #hero>* {
     width: 100%;
     flex: 1;
 }
 
+/* Narrowing width for h1 tags in the hero section to wrap text */
+#hero h1 {
+    width: 80%;
+}
+
+/* Styling figure tags in the hero for defined width and content alignment */
 #hero figure {
     width: 20vw;
     display: flex;
     justify-content: center;
 }
 
+/* Adjusting width and max width for images within direct children of #hero */
 #hero>*>img {
     width: 100%;
     max-width: 600px;
 }
 
-/* Small screens, laptops */
+    /* Media query for screens with max width of 992px, adjusting #hero 
+    and its children to a column layout with centre alignment and text centring */
+    @media screen and (max-width: 992px) {
+        /* Switch hero layout to column and add bottom padding */
+        #hero {
+            flex-direction: column;
+            padding-bottom: 3rem;
+        }
 
-@media screen and (max-width: 1024px) {
-    #hero {
-        flex-direction: column;
-        padding-bottom: 3rem;
+        /* Adjust layout and alignment of direct children of #hero for smaller screens */
+        #hero>* {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Adjust width of figure tags in #hero for smaller screens */
+        #hero figure {
+            width: 100%;
+        }
+
+        /* Change order of first child of #hero to be last in smaller screens */
+        #hero> :first-child {
+            order: 2;
+        }
     }
 
-    #hero>* {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
-    #hero figure {
-        width: 100%;
-    }
+/* Featured Section * * * * * * * * * * * * * * * * * * * * * * * * */
 
-    #hero> :first-child {
-        order: 2;
-    }
-}
-
-/* Featured Section */
-
+/* Styling the featured section with a relative position, shadow, padding, 
+flex factor and an increased z-index to display box shadow */
 #featured {
     position: relative;
     box-shadow: 0 0 2rem #000000;
     padding: 3rem 0;
     flex: 1;
-    z-index: 2;
+    z-index: 1;
 }
 
+/* Aligning the h2 elements within the featured section to the centre 
+and adding a bottom margin */
 #featured h2 {
     text-align: center;
+    align-items: center;
     margin-bottom: 3rem;
 }
 
-#info {
+/* Setting the direct children elements of the featured section to 
+a flex row layout, aligned to the start and justified at the centre */
+#featured>*>* {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
 }
 
-#info>* {
+/* Aligning and centring the grand-children elements of the featured section, 
+and setting a width and flex factor */
+#featured>*>*>* {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -294,11 +374,14 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     flex: 1;
 }
 
-#info article {
+/* Setting a width for article elements within the featured section */
+#featured article {
     width: 100%;
 }
 
-#info h3 {
+/* Styling h3 elements with a specific font-family, colour, and text alignment 
+within the featured section */
+#featured h3 {
     font-family: 'Srbija Sans', Arial, Helvetica, sans-serif;
     color: #1f2937;
     text-align: center;
@@ -306,7 +389,9 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     margin-bottom: 0;
 }
 
-#info img {
+/* Styling image elements within the featured section with a square width and height
+based on viewport width, decreased opacity for a fade effect, and other properties */
+#featured img {
     width: 14vw;
     height: 14vw;
     flex-direction: column;
@@ -317,34 +402,44 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     margin-bottom: 0.5rem;
 }
 
-#info img:hover {
+/* Hover effect for image elements within the featured section using scaling 
+to create a zoom effect, and restoring opacity to 1 */
+#featured img:hover {
     transform: scale(1.05);
     opacity: 1;
 }
 
-#info p {
+/* Colour and text alignment for paragraph elements within the featured section */
+#featured p {
     color: #1f2937;
     text-align: center;
 }
 
-/* Small screens, laptops */
-@media screen and (max-width: 1024px) {
-    #info {
-        flex-direction: column;
+    /* Media query for screens with max width of 992px, adjusting the layout and styles 
+    for the featured section and its children */
+    @media screen and (max-width: 992px) {
+        /* Adjust the layout of child elements of the featured section to column */
+        #featured>*>* {
+            flex-direction: column;
+        }
+
+        /* Increase font size of h3 elements within the featured section */
+        #featured h3 {
+            font-size: 2.4rem;
+        }
+
+        /* Adjust the width and height of image elements within the featured section */
+        #featured img {
+            width: 100%;
+            height: 50vw;
+        }
     }
 
-    #info h3 {
-        font-size: 2.4rem;
-    }
 
-    #info img {
-        width: 100%;
-        height: 50vw;
-    }
-}
+/* Featured Quote * * * * * * * * * * * * * * * * * * * * * * * * */
 
-/* Quote Section */
-
+/* Configuring the quote class to be a centred flex container, 
+with a light colour and generous margin for readability */
 .quote {
     display: flex;
     flex-direction: column;
@@ -354,6 +449,8 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     margin: 3rem;
 }
 
+/* Specifying the font size, weight, style and bottom margin 
+for figure captions within the quote class */
 .quote figcaption {
     font-size: 1.8rem;
     font-weight: 600;
@@ -361,20 +458,23 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     margin: 0 0 3rem auto;
 }
 
-/* Small screens, laptops */
+    /* Media query for resizing the font for blockquote and figcaption elements 
+    within the quote class on screens with a max width of 992px */
+    @media screen and (max-width: 992px) {
+        .quote blockquote {
+            font-size: 2.4rem;
+        }
 
-@media screen and (max-width: 1024px) {
-    .quote blockquote {
-        font-size: 2.4rem;
+        .quote figcaption {
+            font-size: 1.6rem;
+        }
     }
 
-    .quote figcaption {
-        font-size: 1.6rem;
-    }
-}
 
-/* Call to Action */
+/* Call to Action * * * * * * * * * * * * * * * * * * * * * * * * */
 
+/* Styling a call-to-action module as a flex row container with evenly spaced items, 
+box shadow, blue background, padding, and margin */
 .cta {
     display: flex;
     flex-direction: row;
@@ -383,10 +483,12 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     color: #f9faf8;
     background: #3882f6;
     border-radius: 0.5em;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.8);
     padding: 3rem 8rem;
     margin: 6rem auto;
 }
 
+/* Font styling for h2 tags within the CTA module */
 .cta h2 {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     font-size: 1.8rem;
@@ -394,30 +496,31 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
     color: #f9faf8;
 }
 
+/* Removing margins from p tag within the CTA module */
 .cta p {
     margin: 0;
 }
 
-/* iPads, tablets */
+    /* Media query to rearrange CTA layout and styles on screens narrower than 768px */
+    @media screen and (max-width: 768px) {
+        .cta {
+            flex-direction: column;
+            padding: 3rem;
+        }
 
-@media screen and (max-width: 768px) {
-    .cta {
-        flex-direction: column;
-        padding: 3rem;
+        .cta h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .cta p {
+            text-align: center;
+        }
     }
 
-    .cta h2 {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
+/* Footer * * * * * * * * * * * * * * * * * * * * * * * * */
 
-    .cta p {
-        text-align: center;
-    }
-}
-
-/* Footer */
-
+/* Footer styling including its position, layout, color scheme, box-shadow, and padding */
 footer {
     position: relative;
     display: flex;
@@ -426,39 +529,37 @@ footer {
     flex-direction: column;
     color: #f9faf8;
     background: #1f2937;
-    box-shadow: 0 0 2rem #000000;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.8);
     padding: 3rem;
-    z-index: 2;
+    z-index: 1;
 }
 
-/* Side Navigation
+/* Side Navigation * * * * * * * * * * * * * * * * * * * * * * * * *
 Adapted from How TO - Side Navigation by W3Schools
 https://www.w3schools.com/howto/howto_js_sidenav.asp */
+
+/* Styles a side navigation bar as a column-wise flex container, 
+initially hidden with width 0 to be later changed with a JavaScript function.
+Contains settings for position, z-index, anchored at the top right of the viewport, 
+background colour, overflow setting, padding, and transition effect */
 .sidenav {
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* 100% Full-height */
     width: 0;
-    /* 0 width - change this with JavaScript */
     position: fixed;
-    /* Stay in place */
-    z-index: 3;
-    /* Stay on top */
+    z-index: 2;
     top: 0;
-    /* Stay at the top */
     right: 0;
     background-color: #1f2937;
     overflow-x: hidden;
-    /* Disable horizontal scroll */
     padding-top: 6rem;
-    /* Place content 60px from the top */
     transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidenav */
 }
 
-/* The navigation menu links */
-.sidenav a {
+/* Styles the navigation menu links within the side navigation, including their layout, 
+padding, text decoration, colour, and transition effect */
+   .sidenav a {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -469,12 +570,15 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp */
     transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
+/* Styles the links inside list items within the side navigation when hovered upon, 
+   changing the background colour and text colour */
 .sidenav li a:hover {
     background-color: #f9faf8;
     color: #1f2947;
 }
 
+/* Styles the images (flag icons) within side navigation, setting a specific size, 
+colour, and padding */
 .sidenav img {
     width: 2rem;
     height: 2rem;
@@ -482,7 +586,8 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp */
     padding: 0 1rem 0 0;
 }
 
-/* Position and style the close button (top right corner) */
+/* Styles the close button within the side navigation to specify its position, 
+font size, and margin */ 
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -491,27 +596,33 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp */
     margin-left: 5rem;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 1.5rem;
+    /* Media query for screens with max-height of 576px to adjust the styles 
+    within the side navigation */
+    @media screen and (max-height: 576px) {
+        .sidenav {
+            padding-top: 1.5rem;
+        }
+
+        .sidenav a {
+            font-size: 1.8rem;
+        }
     }
 
-    .sidenav a {
-        font-size: 1.8rem;
-    }
-}
 
-/* Wrapper */
+/* Wrapper * * * * * * * * * * * * * * * * * * * * * * * * */
 
+/* Defining layout and styles for any .inner class element that is a direct child 
+of any element within the wrapper, including setting relative position, width, 
+max-width, and automatic margins (centring) */
 #wrapper>*>.inner {
     position: relative;
     width: 80%;
     max-width: 128rem;
     margin: 0 auto;
-    z-index: 2;
 }
 
+/* Setting the gap between all direct child elements of an .inner class 
+within the wrapper to maintain consistent space between elements */
 #wrapper>*>.inner>* {
     gap: 3rem;
 }
