@@ -297,7 +297,7 @@ both vertically and horizontally, and set text colour */
     flex: 1;
 }
 
-/* Narrowing width for h1 tags in the homepage's hero section to wrap text */
+/* Narrowing width for h1 tags in the hero section to wrap text */
 #hero h1 {
     width: 80%;
     text-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
