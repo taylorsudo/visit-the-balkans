@@ -603,11 +603,11 @@ background colour, overflow setting, padding, and transition effect */
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 0;
+    width: 25rem;
     position: fixed;
     z-index: 2;
     top: 0;
-    right: 0;
+    right: -25rem;
     background-color: #1f2937;
     overflow-x: hidden;
     padding-top: 6rem;
