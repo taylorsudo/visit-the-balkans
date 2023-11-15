@@ -715,8 +715,8 @@ increasing the opacity to make it slightly transparent */
     opacity: 1;
 }
   
-/* Media query to adapt font-size of header tags for screens 
-    with a minimum width of 1200px for better readability */
+/* Media query to adapt scroll-to-top button for screens  
+    with a minimum width of 992px for better readability */
     @media screen and (min-width: 992px) {
         #top {
             right: 2.5%;
