@@ -415,8 +415,8 @@ and adding bottom padding for spacing */
     padding-bottom: 3rem;
 }
 
-    /* Media query for screens with max width of 992px, adjusting the layout and styles 
-    for the featured section and its children */
+    /* Media query for screens with max width of 992px, adjusting the flex direction 
+    for tablet and mobile displays */
     @media screen and (max-width: 992px) {
         /* Change the flex direction of the row class to column */
         .row {

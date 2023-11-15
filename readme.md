@@ -14,6 +14,24 @@ The overall design and development of the website were guided by the objective o
 
 - **Flexbox rows and grids** are utilised for the layout to create a responsive design that maintains its integrity across different screen sizes. This decision was motivated by the need for adaptability and visual consistency across multiple devices.
 
+
+```CSS
+    /* Media query for screens with max width of 992px, adjusting the flex direction 
+    for tablet and mobile displays */
+    @media screen and (max-width: 992px) {
+        /* Change the flex direction of the row class to column */
+        .row {
+            flex-direction: column;
+        }
+
+        /* Adjust the width and height of image elements within the main section */
+        main img {
+            width: 100%;
+            height: 50vw;
+        }
+    }
+```
+
 - A **call-to-action module** is placed at the bottom of each page to encourage users to download a travel brochure. This decision was driven by the goal of increasing user engagement and retention.
 
 ## Mockups vs Prototype
@@ -43,21 +61,6 @@ There is a number of potential enhancements for future iterations:
 - Adding interactivity to the map of the Balkans on the homepage, as an additional means of navigation and to provide a more immersive user experience.
 
 - Improving the website content, such as the addition of links to external websites, to provide users with a more engaging platform and inspiring them to explore further. The website aims to be a valuable point of reference for users interested in travelling to the Balkans. More detailed, action-oriented content can also improve user engagement, increase returning visitors, and potentially lead to higher conversion rates.
-
-## Markup
-
-When I using the `anchor tag` it failed.
-
-```HTML
-<h1 id="title">Heading</h1>
-<p>Paragraph<p>
-```
-
-```CSS
-body > div:nth-child(2) {
-    background-color: red;
-}
-```
 
 ## References
 
