@@ -289,7 +289,6 @@ both vertically and horizontally, and set text colour */
     justify-content: center;
     align-items: center;
     color: #f9faf8;
-    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
 }
 
 /* Setting width and flex factor for direct children of #hero */
@@ -299,8 +298,9 @@ both vertically and horizontally, and set text colour */
 }
 
 /* Narrowing width for h1 tags in the homepage's hero section to wrap text */
-#hero.home h1 {
+#hero h1 {
     width: 80%;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
 }
 
 /* Adding text shadow to paragraphs in the homepage's hero section for better contrast */
@@ -690,6 +690,7 @@ with transitions set for the opacity and background colour */
     font-size: 2rem;
     color: #f9faf8;
     background-color: #3882f6;
+    box-shadow: 0 0 2rem #000000;
     border: none;
     border-radius: 50%;
     bottom: 6vw;

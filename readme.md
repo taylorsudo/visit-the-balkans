@@ -1,6 +1,14 @@
 Hello world.  
 Double space after first line.
 
+## Justifications for implementation decisions
+
+
+## Comparisons between mockups and prototype
+
+
+## Discussion of any further iterations/improvements
+
 Empty line above makes new paragraph.
 
 # Heading #
@@ -54,14 +62,6 @@ body > div:nth-child(2) {
 ```
 
 > "Cheese is a type of meat, a very tasty treat" ~ _The Mighty Boosh_
-
-## Justifications for implementation decisions
-
-
-## Comparisons between mockups and prototype
-
-
-## Discussion of any further iterations/improvements
 
 # References
 
