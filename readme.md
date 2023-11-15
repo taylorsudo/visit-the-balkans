@@ -54,6 +54,8 @@ The initial mockups served as a blueprint during the development phase, outlinin
 
 - Users communicated frustration with scrolling back up to the top of country pages to access the menu. To improve the user experience, I **added a 'back-to-top' button** that appears once users start scrolling down the page. This button, when clicked or tapped, uses smooth scrolling to seamlessly take the user back to the top of the page. I chose to implement this button rather than a sticky navigation as it is less visually obstructive.
 
+- I **added a background in the call-to-action section** to break up the content and make the module more distinctive.
+
 ## Future Iterations/Improvements
 
 There is a number of potential enhancements for future iterations:
