@@ -128,7 +128,6 @@ and centred text, as well as a text-shadow for better contrast */
 blockquote {
     font-size: 3.2rem;
     font-style: italic;
-    text-align: center;
     text-shadow: 0 0 1rem #000000;
 }
 
