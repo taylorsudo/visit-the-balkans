@@ -302,17 +302,13 @@ both vertically and horizontally, and set text colour */
     text-shadow: 0 0 1rem #000000;
 }
 
-/* Styling figure tags in the hero for defined width and content alignment */
-#hero figure {
+/* Styling hero images for defined width and content alignment */
+#hero img {
     width: 20vw;
+    max-width: 600px;
     display: flex;
     justify-content: center;
-}
-
-/* Adjusting width and max width for images within direct children of #hero */
-#hero>*>img {
-    width: 100%;
-    max-width: 600px;
+    margin-bottom: -3rem;
 }
 
     /* Media query for screens with max width of 992px, adjusting #hero 
@@ -336,8 +332,8 @@ both vertically and horizontally, and set text colour */
             text-align: center;
         }
 
-        /* Adjust width of figure tags in #hero for smaller screens */
-        #hero figure {
+        /* Adjust width of hero images for smaller screens */
+        #hero img {
             width: 100%;
         }
 
@@ -377,8 +373,8 @@ and centred horizontally. */
     justify-content: center;
 }
 
-/* Styling image elements within main sections with a square width and height
-based on viewport width, decreased opacity for a fade effect, and other properties */
+/* Styling image elements within main sections with a width and height based on 
+viewport width, decreased opacity for a fade effect, and other properties */
 main img {
     width: 30vw;
     height: 20vw;
