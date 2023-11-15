@@ -17,14 +17,18 @@ Adapted from Bootstrap Scroll To Top Button
 https://mdbootstrap.com/docs/standard/extended/back-to-top/ */ 
 document.addEventListener("DOMContentLoaded", function () {
   let mybutton = document.getElementById("top");
+  const scrollThreshold = window.innerHeight / 2;
 
-  // When the user scrolls down 100px from the top of the document, show the button
+  // When the user scrolls down 250px from the top of the document, show the button
   window.onscroll = function () {
     scrollFunction();
   };
 
   function scrollFunction() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    if (
+      document.body.scrollTop > scrollThreshold || 
+      document.documentElement.scrollTop > scrollThreshold
+    ) {
       mybutton.classList.add("visible");
     } else {
       mybutton.classList.remove("visible");

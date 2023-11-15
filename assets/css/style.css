@@ -690,16 +690,16 @@ with transitions set for the opacity and background colour */
 #top {
     opacity: 0;
     position: fixed;
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     font-size: 2rem;
     color: #f9faf8;
     background-color: #3882f6;
     box-shadow: 0 0 2rem #000000;
     border: none;
     border-radius: 50%;
-    bottom: 6vw;
-    right: 6vw;
+    bottom: 2.5%;
+    right: 10%;
     transition: opacity 0.5s ease, background-color 0.3s ease;
     z-index: 2;
 }
@@ -715,3 +715,10 @@ increasing the opacity to make it slightly transparent */
     opacity: 1;
 }
   
+/* Media query to adapt font-size of header tags for screens 
+    with a minimum width of 1200px for better readability */
+    @media screen and (min-width: 992px) {
+        #top {
+            right: 2.5%;
+        }
+    }
