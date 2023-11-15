@@ -58,9 +58,9 @@ The initial mockups served as a blueprint during the development phase, outlinin
 
 There is a number of potential enhancements for future iterations:
 
-- Adding interactivity to the map of the Balkans on the homepage, as an additional means of navigation and to provide a more immersive user experience.
+- **Adding interactivity** to the map of the Balkans on the homepage, as an additional means of navigation and to provide a more immersive user experience.
 
-- Improving the website content, such as the addition of links to external websites, to provide users with a more engaging platform and inspiring them to explore further. The website aims to be a valuable point of reference for users interested in travelling to the Balkans. More detailed, action-oriented content can also improve user engagement, increase returning visitors, and potentially lead to higher conversion rates.
+- Improving the website content, such as **adding links to external websites**, to provide users with a more engaging platform and inspiring them to explore further. The website aims to be a valuable point of reference for users interested in travelling to the Balkans. More detailed, action-oriented content can also improve user engagement, increase returning visitors, and potentially lead to higher conversion rates.
 
 ## References
 
