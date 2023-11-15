@@ -8,13 +8,13 @@ I structured the site around geographic specificity, ensuring each country withi
 
 The overall design and development of the website were guided by the objective of showcasing the Balkans' cultural and geographical diversity. I implemented a number of features to create an engaging, informative, and user-friendly interface.
 
-- I included a **slide-in navigation sidebar** to provide users with an overview of the website's contents, and to enable quick access to each page. The navigation sidebar is accessible from the menu button in the global header, which is designed as a bordered word menu for increased affordance (Interaction Design Foundation, 2023).
+- The **slide-in navigation sidebar** provides users with an overview of the website's contents, and enables quick access to each page. The navigation sidebar is accessible from the menu button in the global header, which is designed as a bordered word menu for increased affordance (Interaction Design Foundation, 2023).
 
-- I incorporated the **hero section** to immediately engage users. This section on the homepage includes a call-to-action to highlight the purpose of the website. On the country pages, the section gives a brief overview of the country's highlights before the user delves into the content. This approach aims to quickly capture user interest and guide them towards meaningful interactions.
+- The **hero section** is designed to engage users as soon as they land on the webpage. This section on the homepage includes a call-to-action to highlight the purpose of the website. On the country pages, the section gives a brief overview of the country's highlights before the user delves into the content. This approach aims to quickly capture user interest and guide them towards meaningful interactions.
 
-- I utilised **Flexbox rows and grids** for the layout to create a responsive design that maintains its integrity across different screen sizes. This decision was motivated by the need for adaptability and visual consistency across multiple devices.
+- **Flexbox rows and grids** are utilised for the layout to create a responsive design that maintains its integrity across different screen sizes. This decision was motivated by the need for adaptability and visual consistency across multiple devices.
 
-- I placed a **call-to-action module** at the bottom of each page to encourage users to download a travel brochure. This decision was driven by the goal of increasing user engagement and retention.
+- A **call-to-action module** is placed at the bottom of each page to encourage users to download a travel brochure. This decision was driven by the goal of increasing user engagement and retention.
 
 ## Mockups vs Prototype
 
@@ -22,19 +22,19 @@ The initial mockups served as a blueprint during the development phase, outlinin
 
 ### Homepage
 
-![Homepage](/assets/images/readme-home.png)
+![Homepage mockup and prototype](/assets/images/readme-home.png)
 
-- **Navigation Structure:** The mockups initially suggested a more intricate navigation structure, but the prototype adopted a simplified approach for improved user experience and easy access to information.
+- The mockups initially included a row of flag icons for the top navigation, with the menu button appearing on smaller devices. User feedback highlighted questions about whether these flags are widely identifiable, and if they would be recognised as navigation buttons. Accordingly, I **replaced the flag icons with a menu button** in the prototype so that users can immediately discern its purpose.
 
-- **Layout Adjustments:** Minor tweaks were made to the layout during the prototype stage for better visual hierarchy, content readability, and user engagement.
+- Users expressed concerns about the readability of text overlayed on images. To address this, I **added text shadows to improve contrast** and add dimension to the overall layout. In addition, I added box shadows to the featured countries section, call-to-action module, and footer to highlight important content.
 
 ### Country Pages
 
-![Croatia page](/assets/images/readme-country.png)
+![Country page mockup and prototype](/assets/images/readme-country.png)
 
-- **Navigation Structure:** The mockups initially suggested a more intricate navigation structure, but the prototype adopted a simplified approach for improved user experience and easy access to information.
+- Users reported difficulties with identifying details in the country page images. In response to this, I **increased the size of the images** to enhance the visual appeal of the site but also provide users with a more immersive experience. By increasing the size of the images, users are able to get a more detailed visual representation of each country, enhancing their overall user experience.
 
-- **Layout Adjustments:** Minor tweaks were made to the layout during the prototype stage for better visual hierarchy, content readability, and user engagement.
+- Users communicated frustration with scrolling back up to the top of country pages to access the menu. To improve the user experience, I **added a 'back-to-top' button** that appears once users start scrolling down the page. This button, when clicked or tapped, uses smooth scrolling to seamlessly take the user back to the top of the page. I chose to implement this button rather than a sticky navigation as it is less visually obstructive.
 
 ## Future Iterations/Improvements
 
