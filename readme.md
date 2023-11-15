@@ -1,50 +1,54 @@
-Hello world.  
-Double space after first line.
+# Visit the Balkans
 
-## Justifications for implementation decisions
+This microsite is designed to present the Balkans as a unique destination offering a diversity of cultures, histories, landscapes, and traditions to explore.  
 
+I structured the site around geographic specificity, ensuring each country within the Balkans region was adequately represented. This allows users to delve into each country individually, offering a comprehensive look at each destination.
 
-## Comparisons between mockups and prototype
+## Implementation Decisions
 
+The overall design and development of the website were guided by the objective of showcasing the Balkans' cultural and geographical diversity. I implemented a number of features to create an engaging, informative, and user-friendly interface.
 
-## Discussion of any further iterations/improvements
+- I included a **slide-in navigation sidebar** to provide users with an overview of the website's contents, and to enable quick access to each page. The navigation sidebar is accessible from the menu button in the global header, which is designed as a bordered word menu for increased affordance (Interaction Design Foundation, 2023).
 
-Empty line above makes new paragraph.
+- I incorporated the **hero section** to immediately engage users. This section on the homepage includes a call-to-action to highlight the purpose of the website. On the country pages, the section gives a brief overview of the country's highlights before the user delves into the content. This approach aims to quickly capture user interest and guide them towards meaningful interactions.
 
-# Heading #
+- I utilised **Flexbox rows and grids** for the layout to create a responsive design that maintains its integrity across different screen sizes. This decision was motivated by the need for adaptability and visual consistency across multiple devices.
 
-## Chapter 1 ##
+- I placed a **call-to-action module** at the bottom of each page to encourage users to download a travel brochure. This decision was driven by the goal of increasing user engagement and retention.
 
-### Subsection 1
+## Mockups vs Prototype
 
-Some text is **strong** and some text is _emphasised_.
+The initial mockups served as a blueprint during the development phase, outlining the website's layout, contents, colour scheme, and typography. I made some minor adjustments during the prototype phase to improve usability, performance, and aesthetics.
 
-_Some text is **strong** but all text is emphasised._
+### Homepage
 
-Not a good ~~sentance~~ sentence.
+![Homepage](/assets/images/readme-home.png)
 
-#### Ordered List:
-1. First item
-1. Second item
-1. other item
+- **Navigation Structure:** The mockups initially suggested a more intricate navigation structure, but the prototype adopted a simplified approach for improved user experience and easy access to information.
 
-#### Unordered List:
-- Item 1
-- Item 2
-    - Item 3
-        - Item 4
-        1. numbered
-        1. numbered again
-        - dotted
-        1. numbered?
+- **Layout Adjustments:** Minor tweaks were made to the layout during the prototype stage for better visual hierarchy, content readability, and user engagement.
 
-[Link](https://example.com)
+### Country Pages
 
-<!-- external image -->
-![kitten](https://placekitten.com/408/287)
+![Croatia page](/assets/images/readme-country.png)
 
-<!-- internal image -->
-![another kitten](/readme_images/kitten.jpg)
+- **Navigation Structure:** The mockups initially suggested a more intricate navigation structure, but the prototype adopted a simplified approach for improved user experience and easy access to information.
+
+- **Layout Adjustments:** Minor tweaks were made to the layout during the prototype stage for better visual hierarchy, content readability, and user engagement.
+
+## Future Iterations/Improvements
+
+While the current website meets its objectives effectively, we've identified potential enhancements for future iterations:
+
+1. **Interactive Maps:** We plan to incorporate interactive maps for each country to provide a more immersive user experience.
+
+2. **User Feedback System:** A user feedback system will help understand user behavior better and guide subsequent improvements.
+
+3. **Multilingual Support:** Considering the global audience, multilingual support can significantly improve the site's accessibility.
+
+4. **Mobile Optimization:** Though the website is responsive, further optimization for mobile devices will ensure a flawless user experience across all platforms.
+
+## Markup
 
 CheeseCheeseCheese ([Wedholm, et.al., 2006](#bibliography))
 
@@ -63,7 +67,7 @@ body > div:nth-child(2) {
 
 > "Cheese is a type of meat, a very tasty treat" ~ _The Mighty Boosh_
 
-# References
+## References
 
 - 350 .org. (2010). Serbia: Rafting on the River Tara (National Park) [Photograph]. Flickr. https://www.flickr.com/photos/350org/5067327911
 - Acka27. (2007). _Novi Sad | The center of the city_ [Photograph]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Novi_Sad_-_Vojvodina.jpg
