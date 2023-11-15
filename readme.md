@@ -8,7 +8,7 @@ I structured the site around geographic specificity, ensuring each country withi
 
 The overall design and development of the website were guided by the objective of showcasing the Balkans' cultural and geographical diversity. I implemented a number of features to create an engaging, informative, and user-friendly interface.
 
-- The **slide-in navigation sidebar** provides users with an overview of the website's contents, and enables quick access to each page. The navigation sidebar is accessible from the menu button in the global header, which is designed as a bordered word menu for increased affordance (Interaction Design Foundation, 2023).
+- The **slide-in navigation sidebar** provides users with an overview of the website's contents, and enables quick access to each page. The navigation sidebar is accessible from the menu button in the global header, which is designed as a bordered word menu for increased affordance ([Interaction Design Foundation, 2023](#references)).
 
 - The **hero section** is designed to engage users as soon as they land on the webpage. This section on the homepage includes a call-to-action to highlight the purpose of the website. On the country pages, the section gives a brief overview of the country's highlights before the user delves into the content. This approach aims to quickly capture user interest and guide them towards meaningful interactions.
 
@@ -38,19 +38,13 @@ The initial mockups served as a blueprint during the development phase, outlinin
 
 ## Future Iterations/Improvements
 
-While the current website meets its objectives effectively, we've identified potential enhancements for future iterations:
+There is a number of potential enhancements for future iterations:
 
-1. **Interactive Maps:** We plan to incorporate interactive maps for each country to provide a more immersive user experience.
+- Adding interactivity to the map of the Balkans on the homepage, as an additional means of navigation and to provide a more immersive user experience.
 
-2. **User Feedback System:** A user feedback system will help understand user behavior better and guide subsequent improvements.
-
-3. **Multilingual Support:** Considering the global audience, multilingual support can significantly improve the site's accessibility.
-
-4. **Mobile Optimization:** Though the website is responsive, further optimization for mobile devices will ensure a flawless user experience across all platforms.
+- Improving the website content, such as the addition of links to external websites, to provide users with a more engaging platform and inspiring them to explore further. The website aims to be a valuable point of reference for users interested in travelling to the Balkans. More detailed, action-oriented content can also improve user engagement, increase returning visitors, and potentially lead to higher conversion rates.
 
 ## Markup
-
-CheeseCheeseCheese ([Wedholm, et.al., 2006](#bibliography))
 
 When I using the `anchor tag` it failed.
 
@@ -64,8 +58,6 @@ body > div:nth-child(2) {
     background-color: red;
 }
 ```
-
-> "Cheese is a type of meat, a very tasty treat" ~ _The Mighty Boosh_
 
 ## References
 
