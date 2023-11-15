@@ -695,7 +695,7 @@ with transitions set for the opacity and background colour */
     bottom: 6vw;
     right: 6vw;
     transition: opacity 0.5s ease, background-color 0.3s ease;
-    z-index: 3;
+    z-index: 2;
 }
 
 /* Styling back-to-top button when it has the 'visible' class (added by JavaScript), 
