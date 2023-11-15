@@ -119,6 +119,10 @@ p {
     margin: 0 0 2rem 0;
 }
 
+strong, b {
+    font-weight: 600;
+}
+
 /* Styling all blockquote tags with larger font size, italicised, 
 and centred text, as well as a text-shadow for better contrast */
 blockquote {
@@ -167,6 +171,7 @@ button#menu {
     height: 38px;
     padding: 0 30px;
     color: #f9faf8;
+    font-weight: 600;
     text-align: center;
     white-space: nowrap;
     line-height: 38px;
