@@ -331,6 +331,9 @@ both vertically and horizontally, and set text colour */
 #hero img {
     width: 20vw;
     max-width: 600px;
+}
+
+#hero.home {
     margin-bottom: -3rem;
 }
 
@@ -361,7 +364,7 @@ both vertically and horizontally, and set text colour */
         to be last in smaller screens */
         #hero.home> :first-child {
             order: 2;
-            padding-bottom: 3rem;
+            padding-bottom: 6rem;
         }
     }
 
