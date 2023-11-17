@@ -374,6 +374,7 @@ both vertically and horizontally, and set text colour */
 /* Styling main sections with a box shadow, padding, 
 flex factor and an increased z-index to display box shadow */
 main {
+    position: relative;
     box-shadow: 0 0 2rem #000000;
     z-index: 1;
 }
