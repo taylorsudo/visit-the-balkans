@@ -444,11 +444,6 @@ and top padding for spacing */
 
 /* Featured Section * * * * * * * * * * * * * * * * * * * * * * * * */
 
-/* Setting the width of the hyperlinked elements within the featured section to 100% */
-#featured a {
-    width: 100%;
-}
-
 /* Styling h3 elements with a specific font-family, colour, and text alignment 
 within the featured section */
 #featured h3 {
@@ -464,6 +459,7 @@ based on viewport width, decreased opacity for a fade effect, and other properti
 #featured img {
     width: 14vw;
     height: 14vw;
+    min-height: 0;
     border-radius: 1.2rem;
     opacity: 0.8;
     transition: 0.3s;
