@@ -28,8 +28,7 @@ html {
 /* Setting the base font size for the body to be 1.5em, 
 which is 15px here due to setting of html font-size to 62.5% */
 body {
-    display: grid;
-    font-size: 1.5em;
+    font-size: 1.6em;
     line-height: 1.6;
     font-weight: 400;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
