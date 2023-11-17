@@ -388,7 +388,8 @@ main * {
 viewport width, decreased opacity for a fade effect, and other properties */
 main img {
     width: 100%;
-    height: 20vw;
+    height: 15vw;
+    min-height: 300px;
     object-fit: cover;
     border-radius: 1.2rem;
     margin-bottom: 0.5rem;
