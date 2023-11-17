@@ -36,11 +36,6 @@ body {
     color: #1f2937;
 }
 
-/* Setting article elements to full width */
-article {
-    width: 100%;
-}
-
 /* Typography * * * * * * * * * * * * * * * * * * * * * * * * *
 Adapted from Skeleton by David Gamache
 https://github.com/dhg/Skeleton/blob/master/css/skeleton.css */
@@ -119,6 +114,7 @@ p {
     margin: 0 0 2rem 0;
 }
 
+/* Setting semi-bold font weight for all strong and b tags */
 strong, b {
     font-weight: 600;
 }
@@ -200,8 +196,7 @@ border colour, and adding background colour */
     background: #619eff;
 }
 
-
-/* Background Cover * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Background Cover */
 
 /* Class styles that set up a full size background cover with padding */
 .background-cover {
@@ -209,7 +204,6 @@ border colour, and adding background colour */
     background-size: cover;
     object-fit: cover;
     background-attachment: fixed;
-    padding: 3rem 0;
 }
 
 /* Pseudo-element for the background cover provides a dark overlay, 
@@ -224,6 +218,39 @@ for creating contrast with light content in the foreground */
     background-color: rgba(31, 41, 55, 0.8);
 }
 
+/* Wrappers * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Defining layout and styles for any .inner class element that is a direct child 
+of any element within the wrapper, including setting relative position, width, 
+max-width, and automatic margins (centring) */
+.inner {
+    position: relative;
+    width: 80%;
+    max-width: 128rem;
+    margin: auto;
+    padding: 3rem;
+}
+
+/* Setting the gap between all direct child elements of an .inner class 
+within the wrapper to maintain consistent space between elements */
+.inner>* {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* Displaying flex containers as rows, with items aligned at the top 
+and centred horizontally. */
+.inner .row {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+/* Displaying flex containers as columns, with items centred vertically. */
+.inner .column {
+    flex-direction: column;
+}
+
 
 /* Navigation Menu * * * * * * * * * * * * * * * * * * * * * * * * *
 Adapted from Mobile Navigation Bar by W3Schools
@@ -233,19 +260,11 @@ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
 space-between content, and padding at the bottom */
 #banner {
     width: 100%;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-decoration: none;
     padding-bottom: 3rem;
-    flex: 1;
-}
-
-/* Styling child elements (direct and indirect) of the banner, 
-creating a flex container and aligning items to the start */
-#banner * {
-    display: flex;
-    align-items: flex-start;
+    flex: auto;
 }
 
 /* Styling hyperlink colour within the banner */
@@ -288,7 +307,6 @@ for better user feedback, and adding a transition for a smoother appearance chan
 /* Hero styles define a flex container with centered content, 
 both vertically and horizontally, and set text colour */
 #hero {
-    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -297,13 +315,11 @@ both vertically and horizontally, and set text colour */
 
 /* Setting width and flex factor for direct children of #hero */
 #hero>* {
-    width: 100%;
     flex: 1;
 }
 
 /* Narrowing width for h1 tags in the hero section to wrap text */
 #hero h1 {
-    width: 80%;
     text-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
 }
 
@@ -316,8 +332,6 @@ both vertically and horizontally, and set text colour */
 #hero img {
     width: 20vw;
     max-width: 600px;
-    display: flex;
-    justify-content: center;
     margin-bottom: -3rem;
 }
 
@@ -329,64 +343,49 @@ both vertically and horizontally, and set text colour */
             flex-direction: column;
         }
 
-        /* Adjust layout of direct children of #hero for smaller screens */
-        #hero>* {
-            display: flex;
-            flex-direction: column;
+        #hero.home {
+            gap: 0;
         }
 
         /* Centre text alignment of direct children of the homepage's #hero 
         for smaller screens */
         #hero.home>* {
-            align-items: center;
             text-align: center;
         }
 
         /* Adjust width of hero images for smaller screens */
         #hero img {
-            width: 100%;
+            width: 60vw;
         }
 
         /* Change order of first child of the homepage's hero section 
         to be last in smaller screens */
         #hero.home> :first-child {
             order: 2;
+            padding-bottom: 3rem;
         }
     }
 
 
 /* Main Section * * * * * * * * * * * * * * * * * * * * * * * * */
 
-/* Styling main sections with a relative position, shadow, padding, 
+/* Styling main sections with a box shadow, padding, 
 flex factor and an increased z-index to display box shadow */
 main {
-    position: relative;
     box-shadow: 0 0 2rem #000000;
-    padding: 3rem 0;
-    flex: 1;
     z-index: 1;
 }
 
-/* Displaying flex containers as rows, with items aligned at the top 
-and centred horizontally. */
-.row {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-/* Displaying flex containers as columns, with items centred vertically. */
-.column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* Setting children of main element to full width */
+main * {
+    width: 100%;
+    flex: auto;
 }
 
 /* Styling image elements within main sections with a width and height based on 
 viewport width, decreased opacity for a fade effect, and other properties */
 main img {
-    width: 30vw;
+    width: 100%;
     height: 20vw;
     object-fit: cover;
     border-radius: 1.2rem;
@@ -400,30 +399,35 @@ main h2 {
     margin-bottom: 3rem;
 }
 
+/* Figures will take up twice as much space along the main axis 
+compared to other items in the same row. */
+.row figure {
+    flex: 2;
+}
+
+/* Figures will take up thrice as much space along the main axis 
+compared to other items in the same row. */
+.row div {
+    flex: 3;
+}
+
+/* Apply styles to rows inside a section with the class "inner" */
+.inner section.row {
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
 /* Styling alternative article elements with a light grey background 
 and top padding for spacing */
-article.alt {
+.column.alt {
     background-color: #ebebeb;
-    padding-top: 3rem;
-}
-
-/* Adding top padding to the last child element with the .column class */
-.column:last-child {
-    padding-top: 3rem;
-}
-
-/* Centring section elements that are direct children of elements with the 'inner' class, 
-and adding bottom padding for spacing */
-.inner>section {
-    align-items: center;
-    padding-bottom: 3rem;
 }
 
     /* Media query for screens with max width of 992px, adjusting the flex direction 
     for tablet and mobile displays */
     @media screen and (max-width: 992px) {
         /* Change the flex direction of the row class to column */
-        .row {
+        .inner .row {
             flex-direction: column;
         }
 
@@ -532,7 +536,6 @@ for figure captions within the quote class */
 /* Styling a call-to-action module as a flex row container with evenly spaced items, 
 box shadow, blue background, padding, and margin */
 .cta {
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
@@ -615,7 +618,7 @@ background colour, overflow setting, padding, and transition effect */
 
 /* Styles the navigation menu links within the side navigation, including their layout, 
 padding, text decoration, colour, and transition effect */
-   .sidenav a {
+.sidenav a {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -646,10 +649,9 @@ colour, and padding */
 font size, and margin */ 
 .sidenav .closebtn {
     position: absolute;
-    top: 0;
-    right: 2.5rem;
-    font-size: 3.6rem;
-    margin-left: 5rem;
+    top: 2.5rem;
+    right: 1.8rem;
+    font-size: 3rem;
 }
 
     /* Media query for screens with max-height of 576px to adjust the styles 
@@ -665,23 +667,7 @@ font size, and margin */
     }
 
 
-/* Wrapper * * * * * * * * * * * * * * * * * * * * * * * * */
-
-/* Defining layout and styles for any .inner class element that is a direct child 
-of any element within the wrapper, including setting relative position, width, 
-max-width, and automatic margins (centring) */
-.inner {
-    position: relative;
-    width: 80%;
-    max-width: 128rem;
-    margin: 0 auto;
-}
-
-/* Setting the gap between all direct child elements of an .inner class 
-within the wrapper to maintain consistent space between elements */
-.inner>* {
-    gap: 3rem;
-}
+/* Back to Top * * * * * * * * * * * * * * * * * * * * * * * * */
 
 /* Styling the back-to-top button as a fixed, circular button 
 positioned at the bottom right of the viewport (initially invisible), 
